@@ -100,6 +100,18 @@ h1 em { font-style: normal; background: linear-gradient(90deg, #d9c8ff, #8c61fa 
   .phone { margin-top: 10px; }
 }
 
+/* real screenshot inside the hero phone */
+.screen.real { background: #111; }
+.screen.real img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* screenshot gallery: horizontal, snaps, full-bleed */
+.screens { padding-bottom: 40px; }
+.gallery { display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px max(20px, calc((100vw - var(--max)) / 2 + 20px)) 26px;
+  scrollbar-width: thin; scrollbar-color: rgba(140,97,250,0.5) transparent; }
+.gallery img { flex: none; width: min(260px, 68vw); aspect-ratio: 1320 / 2868; border-radius: 26px; scroll-snap-align: center;
+  border: 1px solid var(--card-line); box-shadow: 0 20px 50px rgba(0,0,0,0.45); background: var(--bg2); }
+.gallery:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
 /* sections */
 section { padding: 70px 0; }
 .kicker { color: var(--accent-2); font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
